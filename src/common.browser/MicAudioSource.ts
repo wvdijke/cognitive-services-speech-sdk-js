@@ -149,17 +149,17 @@ export class MicAudioSource implements IAudioSource {
                 }
             };
 
-            //if (this.privContext.state === "suspended") {
-            //    // NOTE: On iOS, the Web Audio API requires sounds to be triggered from an explicit user action.
-            //    // https://github.com/WebAudio/web-audio-api/issues/790
-            //    this.privContext.resume()
-            //        .then(next)
-            //        .catch((reason: any): void => {
-            //            this.privInitializeDeferral.reject(`Failed to initialize audio context: ${reason as string}`);
-            //        });
-            //} else {
+            // if (this.privContext.state === "suspended") {
+            //     // NOTE: On iOS, the Web Audio API requires sounds to be triggered from an explicit user action.
+            //     // https://github.com/WebAudio/web-audio-api/issues/790
+            //     this.privContext.resume()
+            //         .then(next)
+            //         .catch((reason: any): void => {
+            //             this.privInitializeDeferral.reject(`Failed to initialize audio context: ${reason as string}`);
+            //         });
+            // } else {
                 next();
-            //}
+            // }
         }
 
         return this.privInitializeDeferral.promise;
